@@ -1,4 +1,6 @@
 import React from "react";
+import ProfileDropDown from "./ProfileDropDown";
+import CartButton from "./CartButton";
 
 const Header = () => {
     return (
@@ -26,31 +28,20 @@ const Header = () => {
                     {/* Navigation Links (Hidden on small screens) */}
                     <nav className="hidden md:flex space-x-6 text-gray-700">
                         <a href="/" className="hover:text-blue-600">Home</a>
-                        <a href="/categories" className="hover:text-blue-600">Categories</a>
-                        <a href="/about" className="hover:text-blue-600">About Us</a>
-                        <a href="/contact" className="hover:text-blue-600">Contact</a>
+                        <a href="#category" className="hover:text-blue-600">Categories</a>
+                        <a href="#about" className="hover:text-blue-600">About Us</a>
+                        <a href="#contact" className="hover:text-blue-600">Contact</a>
                     </nav>
 
                     {/* Cart Icon */}
                     <div className="relative">
-                        <a href="/cart" className="text-gray-700 hover:text-blue-600">
-                            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.5 8h11l1.5-8M7 13h10M9 21a1 1 0 100-2 1 1 0 000 2zm6 0a1 1 0 100-2 1 1 0 000 2z" />
-                            </svg>
-                        </a>
-                        {/* Cart Item Count */}
-                        <span className="absolute top-0 right-0 text-xs bg-red-500 text-white rounded-full w-5 h-5 flex items-center justify-center">
-                            3
-                        </span>
+                       <CartButton></CartButton>
                     </div>
 
                     {/* User Account Icon */}
                     <div className="relative">
-                        <button className="text-gray-700 hover:text-blue-600">
-                            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5.121 18.364A2 2 0 016 17h12a2 2 0 011.879 1.364M15 11a3 3 0 10-6 0M4 6a4 4 0 118 0H4z" />
-                            </svg>
-                        </button>
+                        
+                        <ProfileDropDown></ProfileDropDown>
                     </div>
                 </div>
             </div>

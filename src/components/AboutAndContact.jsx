@@ -3,7 +3,7 @@ const AboutAndContact = () => {
       <section className="bg-blue-50 py-10 px-4">
         <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
           {/* About Us Section */}
-          <div className="md:w-1/2 mb-8 md:mb-0 self-start">
+          <div id="about" className="md:w-1/2 mb-8 md:mb-0 self-start">
             <h2 className="text-3xl font-bold text-gray-800 mb-4">About Us</h2>
            <div className="md:w-[90%]">
                 <p className="text-gray-600 leading-relaxed">
@@ -20,7 +20,7 @@ const AboutAndContact = () => {
           </div>
   
           {/* Contact Us Section */}
-          <div className="md:w-1/2 self-start">
+          <div id="contact" className="md:w-1/2 self-start">
             <h2 className="text-3xl font-bold text-gray-800 mb-4">Contact Us</h2>
             <p className="text-gray-600 leading-relaxed mb-4">
               Have questions? We'd love to hear from you! Reach out to us, and our team will respond promptly.
