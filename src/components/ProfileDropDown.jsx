@@ -24,21 +24,17 @@ const ProfileDropdown = () => {
         className="text-gray-700 hover:text-blue-600 focus:outline-none flex items-center space-x-2"
         onClick={toggleDropdown}
       >
+        {/* New Icon */}
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="h-6 w-6"
-          fill="none"
+          fill="currentColor"
           viewBox="0 0 24 24"
-          stroke="currentColor"
         >
           <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M5.121 18.364A2 2 0 016 17h12a2 2 0 011.879 1.364M15 11a3 3 0 10-6 0M4 6a4 4 0 118 0H4z"
+            d="M12 2C6.48 2 2 6.48 2 12c0 5.52 4.48 10 10 10s10-4.48 10-10c0-5.52-4.48-10-10-10zm0 18c-1.97 0-3.8-.81-5.1-2.1.03-1.41 2.83-2.19 5.1-2.19 2.28 0 5.07.78 5.1 2.19C15.8 19.19 13.97 20 12 20zm0-4.5c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3z"
           />
         </svg>
-        <span>Profile</span>
       </button>
 
       {isDropdownOpen && (
