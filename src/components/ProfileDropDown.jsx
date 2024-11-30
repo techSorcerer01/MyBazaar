@@ -1,14 +1,17 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 const ProfileDropdown = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const dropdownRef = useRef(null);
+
 
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
   };
 
   const closeDropdown = (e) => {
-    if (!e.target.closest(".profile-dropdown")) {
+    
+    if(dropdownRef && !dropdownRef.current.contains(e.target)){
       setIsDropdownOpen(false);
     }
   };
@@ -19,10 +22,10 @@ const ProfileDropdown = () => {
   }, []);
 
   return (
-    <div className="relative profile-dropdown">
+    <div ref={dropdownRef} className="relative profile-dropdown">
       <button
         className="text-gray-700 hover:text-blue-600 focus:outline-none flex items-center space-x-2"
-        onClick={toggleDropdown}
+        onClick={toggleDropdown}  
       >
         {/* New Icon */}
         <svg
